@@ -26,17 +26,17 @@ public class Parser {
         String arguments = commandParts.length > 1 ? commandParts[1] : "";
 
         switch (commandName) {
-            case AddRatingCommand.COMMAND_WORD:
-            case ListRatingsCommand.COMMAND_WORD:
-            case EditRatingCommand.COMMAND_WORD:
-            case DeleteRatingCommand.COMMAND_WORD:
-                return ratingCommandParser.parse(commandName, arguments);
-            case "help":
-                return new HelpCommand();
-            case "bye":
-                return new ByeCommand();
-            default:
-                return new UnknownCommand();
+        case AddRatingCommand.COMMAND_WORD:
+        case ListRatingsCommand.COMMAND_WORD:
+        case EditRatingCommand.COMMAND_WORD:
+        case DeleteRatingCommand.COMMAND_WORD:
+            return ratingCommandParser.parse(commandName, arguments);
+        case "help":
+            return new HelpCommand();
+        case "bye":
+            return new ByeCommand();
+        default:
+            return new UnknownCommand();
         }
     }
 }

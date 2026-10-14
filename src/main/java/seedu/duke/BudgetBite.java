@@ -22,6 +22,7 @@ public class BudgetBite {
     private MenuNavigator menuNavigator;
 
     public static void main(String... launchArgs) {
+       
         new BudgetBite().run(launchArgs);
     }
 
